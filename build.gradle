@@ -1,0 +1,61 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.5.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+    id 'io.spring.dependency-management' version '1.0.4.RELEASE'
+    id 'com.jfrog.artifactory' version '4.9.7'
+}
+
+apply plugin: 'maven-publish'
+apply plugin: 'eclipse'
+
+group = 'com.ftp-hyx'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+artifactory {
+    contextUrl = "${artifactory_contextUrl}"
+    publish {
+        repository {
+            repoKey = "${artifactory_repoKey}"
+            username = "${artifactory_user}"
+            password = "${artifactory_password}"
+        }
+        defaults {
+            publications('mavenJava')
+        }
+    }
+}
+
+dependencyManagement {
+    imports { mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}") }
+}
+
+dependencies {
+
+    compile('com.google.code.gson:gson:2.8.5')
+
+}
