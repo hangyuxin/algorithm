@@ -22,12 +22,12 @@
 	@ Description 用于将大量坐标点压缩，路径却变动微小(当大量坐标点打印到前端，前端渲染后虽然细腻，但如此多的dom元素会使前端卡死)  
 	@ author yuxin.hang  
 	@ date 2020/5/28 20:50:36  
-	@ packge com.hyx.douglas.pencher
+	@ package com.hyx.douglas.pencher
 - 大数据去重算法：  
 	@ Description 用于在大量数据中查找重复项(本算法是我基于hash算法和bit树自己构思的，暂时还没有完成，如有小伙伴有更好的算法欢迎提出)  
 	@ author yuxin.hang  
 	@ date 2020/5/28 21:34:57  
-	@ packge com.hyx.bigdata.deduplication  
+	@ package com.hyx.bigdata.deduplication  
 - 动态规划算法：  
 	1. 鸡蛋下楼：  
 		@ Description 有n个鸡蛋m层楼，在最坏的情况下求出最少需要扔几次鸡蛋可以照到鸡蛋不被摔破的最高层(原google面试题) 
@@ -38,14 +38,14 @@
 
 		@ author yuxin.hang  
 		@ date 2020/5/29 21:14:15  
-		@ packge com.hyx.dp.downstairs 
+		@ package com.hyx.dp.downstairs 
 	2. 
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
 		@ author yuxin.hang  
 		@ date 2020/5/28 22:05:49  
-		@ packge com.hyx.find.dichotomy
+		@ package com.hyx.find.dichotomy
 #### Git Feature
 1. Repository address [http://github.com]("github")
 2. Http address [https://github.com/hangyuxin/algorithm.git]("本库http地址")
