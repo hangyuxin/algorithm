@@ -32,7 +32,7 @@
  	@ name DataDeduplocation  
 - 动态规划算法：  
 	1. 鸡蛋下楼：  
-		@ Description 有n个鸡蛋m层楼，在最坏的情况下求出最少需要扔几次鸡蛋可以照到鸡蛋不被摔破的最高层(原google面试题) 
+		@ Description 有n个鸡蛋m层楼，在最坏的情况下求出最少需要扔几次鸡蛋可以找到鸡蛋不被摔破的最高层(原google面试题) 
 		> You work in a 100 floor building and you get 2 identical eggs.
 		You need to figure out the highest floor an egg can be dropped without breaking.
 		The question is how many throws you need to make.
@@ -50,6 +50,26 @@
 		@ date 2020/5/28 22:05:49  
 		@ package com.hyx.find.dichotomy  
 		@ name DichotomyFind  
+- 树：  
+	1. 二叉树：  
+		@ Description 将一个给定数组排为树形，要求树的左侧的子节点比当前节点小，树的右侧节点比当前节点大  
+		@ author yuxin.hang  
+		@ date 2020/5/30 20:43:02 
+		@ package com.hyx.tree.binary  
+		@ name BinaryTree
+	2. 红黑树：  
+		@ Description 将一个给定数组排为树形，要求树的左侧的子节点比当前节点小，树的右侧节点比当前节点大,要求树为红黑树(见红黑树定义)(此算法暂时未完成，预计明天完成)
+		> 红黑树是每个节点都带有颜色属性的二叉查找树，颜色或红色或黑色,在二叉查找树强制一般要求以外，对于任何有效的红黑树我们增加了如下的额外要求:  
+			1. 节点是红色或黑色  
+			2. 根节点是黑色  
+			3. 所有叶子都是黑色(叶子是NUIL节点)  
+			4. 每个红色节点的两个子节点都是黑色(从每个叶子到根的所有路径上不能有两个连续的红色节点)  
+			5. 从任一节点到其每个叶子的所有路径都包含相同数目的黑色节点   
+		
+		@ author yuxin.hang  
+		@ date 2020/5/30 20:43:02 
+		@ package com.hyx.tree.rb  
+		@ name RedBlackTree  
 #### Git Feature
 1. Repository address [http://github.com]("github")
 2. Http address [https://github.com/hangyuxin/algorithm.git]("本库http地址")
