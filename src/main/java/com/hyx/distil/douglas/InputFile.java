@@ -1,4 +1,4 @@
-package com.hyx.douglas.pencher;
+package com.hyx.distil.douglas;
 
 import java.io.BufferedReader;
 import java.io.File;

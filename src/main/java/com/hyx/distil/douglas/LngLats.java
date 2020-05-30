@@ -1,4 +1,4 @@
-package com.hyx.douglas.pencher;
+package com.hyx.distil.douglas;
 
 public class LngLats {
 

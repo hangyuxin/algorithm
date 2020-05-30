@@ -1,4 +1,4 @@
-package com.hyx.douglas.pencher;
+package com.hyx.distil.douglas;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,13 +10,17 @@ import java.util.Map;
 
 /**
  * 道格拉斯抽稀算法实现类，文件中提供的坐标格式必须为：id,经度,维度
+ * 算法实现原理 为：
+ * 根据给定的最小公距查k来计算首末(s,e)点之间是否存在一个点p到s与e之间的连线的的垂距是否大于k，
+ * 如果大于k则将s~e以p点切分，连接sp,ep判断两个连线中否存在一个点p，存在再次切割知道不存在点p
+ * 如果小于k则删除s~e之间的所有坐标点
  * @author sq
  * @date 2020/05/26
  */
-public class TestLoveT {
+public class DouglasDistil {
 
 	public static void main(String[] args) {
-		TestLoveT testLoveT = new TestLoveT();
+	    DouglasDistil douglasDistil = new DouglasDistil();
 		InputFile inputFile = new InputFile(new File(""), Charset.forName("GBK"));
         try {
             final List<LngLats> lngLats = new LinkedList<>();
@@ -28,7 +32,7 @@ public class TestLoveT {
                 lngLats2.setLng(Double.valueOf(arr[1]));
                 lngLats.add(lngLats2);
             });
-            System.out.println(testLoveT.douglasPeukcer(lngLats, 0.00005).toString());
+            System.out.println(douglasDistil.douglasPeukcer(lngLats, 0.00005).toString());
         } catch (IOException e) {
              e.printStackTrace();
         }
