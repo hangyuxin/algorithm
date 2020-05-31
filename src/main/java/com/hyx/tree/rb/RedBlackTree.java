@@ -175,18 +175,20 @@ public class RedBlackTree<T> {
         if (uncleNode != null && uncleNode.getColor()) {
             RedBlackTreeNode<T> redBlackTreeNode1 = redBlackTreeNode;
             while (redBlackTreeNode1 != null) {
-                grandFatherNode = redBlackTreeNode.getParentNode().getParentNode();
+                if (redBlackTreeNode1.getParentNode() == null) {
+                    return;
+                }
+                grandFatherNode = redBlackTreeNode1.getParentNode().getParentNode();
                 if (grandFatherNode.getLeftNode() != null) {
                     grandFatherNode.getLeftNode().setColor(RedBlackTree.BLACK);
                 }
                 if (grandFatherNode.getRightNode() != null) {
                     grandFatherNode.getRightNode().setColor(RedBlackTree.BLACK);
                 }
-                if (grandFatherNode.getParentNode() != null) {
-                    grandFatherNode.setColor(RedBlackTree.RED);
-                } else {
+                if (grandFatherNode.getParentNode() == null) {
                     return;
                 }
+                grandFatherNode.setColor(RedBlackTree.RED);
                 redBlackTreeNode1 = grandFatherNode.getParentNode().getParentNode();
             }
             return;
@@ -197,16 +199,13 @@ public class RedBlackTree<T> {
         grandFatherNode.setColor(RedBlackTree.RED);
         if (redBlackTreeNode.getParentNode().getLeftNode() == redBlackTreeNode) {
             sonNode = redBlackTreeNode.getParentNode().getRightNode();
-            grandFatherNode.setLeftNode(sonNode);
             redBlackTreeNode.getParentNode().setRightNode(grandFatherNode);
         } else {
             sonNode = redBlackTreeNode.getParentNode().getLeftNode();
-            grandFatherNode.setRightNode(sonNode);
             redBlackTreeNode.getParentNode().setLeftNode(grandFatherNode);
         }
         if (grandFatherNode.getParentNode() == null){
             this.redBlackTreeNode = redBlackTreeNode.getParentNode();
-            this.redBlackTreeNode.setParentNode(null);
         } else {
             if (grandFatherNode.getParentNode().getLeftNode() == grandFatherNode) {
                 grandFatherNode.getParentNode().setLeftNode(redBlackTreeNode.getParentNode());
@@ -214,7 +213,13 @@ public class RedBlackTree<T> {
                 grandFatherNode.getParentNode().setRightNode(redBlackTreeNode.getParentNode());
             }
         }
+        redBlackTreeNode.getParentNode().setParentNode(grandFatherNode.getParentNode());
         grandFatherNode.setParentNode(redBlackTreeNode.getParentNode());
+        if (grandFatherNode.getLeftNode() == redBlackTreeNode.getParentNode()) {
+            grandFatherNode.setLeftNode(sonNode);
+        } else {
+            grandFatherNode.setRightNode(sonNode);
+        }
         if (sonNode != null) {
             sonNode.setParentNode(grandFatherNode);
             this.fixTree(sonNode);
@@ -250,7 +255,7 @@ public class RedBlackTree<T> {
     }
     
     public static void main(String[] args) {
-        final RedBlackTree<Integer> redBlackTree = new RedBlackTree<Integer>(new Integer[] {5, 1, 6, 2, 7, 5, 3});
+        final RedBlackTree<Integer> redBlackTree = new RedBlackTree<Integer>(new Integer[] {5, 1, 6, 2, 7, 5, 3, 10, 11, 12, 13, 8, 9});
         System.out.println(redBlackTree.toString());
     }
 

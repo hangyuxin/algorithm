@@ -103,7 +103,7 @@ class RedBlackTreeNode<T> {
     public String toString() {
         return "{color=" + color + ", vals=" + vals.toString()
             + (leftNode == null ? "" : (", leftNode=" + leftNode.toString()))
-            + (rightNode == null ? "" : (", rightNode=" + rightNode.toString())) + "}";
+            + (rightNode == null ? "" : (", rightNode=" + rightNode.toString()))+ "}";
     }
 
 }
