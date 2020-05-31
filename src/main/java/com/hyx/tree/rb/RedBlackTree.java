@@ -3,13 +3,9 @@ package com.hyx.tree.rb;
 import java.util.LinkedList;
 
 /**
- * 红黑树
- * 红黑树是每个节点都带有颜色属性的二叉查找树，颜色或红色或黑色,在二叉查找树强制一般要求以外，对于任何有效的红黑树我们增加了如下的额外要求:  
- * 1. 节点是红色或黑色  
- * 2. 根节点是黑色  
- * 3. 所有叶子都是黑色(叶子是NUIL节点)  
- * 4. 每个红色节点的两个子节点都是黑色(从每个叶子到根的所有路径上不能有两个连续的红色节点)  
- *  5. 从任一节点到其每个叶子的所有路径都包含相同数目的黑色节点
+ * 红黑树 红黑树是每个节点都带有颜色属性的二叉查找树，颜色或红色或黑色,在二叉查找树强制一般要求以外，对于任何有效的红黑树我们增加了如下的额外要求: 1. 节点是红色或黑色 2. 根节点是黑色 3.
+ * 所有叶子都是黑色(叶子是NUIL节点) 4. 每个红色节点的两个子节点都是黑色(从每个叶子到根的所有路径上不能有两个连续的红色节点) 5. 从任一节点到其每个叶子的所有路径都包含相同数目的黑色节点
+ * 
  * @author sq
  * @date 2020/05/30
  * @editDate 2020/05/31
@@ -154,11 +150,13 @@ public class RedBlackTree<T> {
     public boolean isExist(T val) {
         return false;
     }
-    
-     /**
-      * 修正红黑树
-      * @param redBlackTreeNode 从哪个节点开始修复
-      */
+
+    /**
+     * 修正红黑树
+     * 
+     * @param redBlackTreeNode
+     *            从哪个节点开始修复
+     */
     private void fixTree(final RedBlackTreeNode<T> redBlackTreeNode) {
         // 如果父节点为黑色，则不用做什么操作
         if (!redBlackTreeNode.getParentNode().getColor()) {
@@ -173,56 +171,73 @@ public class RedBlackTree<T> {
         }
         // 如果叔节点和父节点都为红色，则将父节点和叔节点置为黑色，爷爷节点置为红色。如果爷爷节点为最高节点则不置颜色直接退出，如果不为最高节点一直逆推到最高节点
         if (uncleNode != null && uncleNode.getColor()) {
-            RedBlackTreeNode<T> redBlackTreeNode1 = redBlackTreeNode;
-            while (redBlackTreeNode1 != null) {
-                if (redBlackTreeNode1.getParentNode() == null) {
-                    return;
-                }
-                grandFatherNode = redBlackTreeNode1.getParentNode().getParentNode();
-                if (grandFatherNode.getLeftNode() != null) {
-                    grandFatherNode.getLeftNode().setColor(RedBlackTree.BLACK);
-                }
-                if (grandFatherNode.getRightNode() != null) {
-                    grandFatherNode.getRightNode().setColor(RedBlackTree.BLACK);
-                }
-                if (grandFatherNode.getParentNode() == null) {
-                    return;
-                }
+            grandFatherNode.getLeftNode().setColor(RedBlackTree.BLACK);
+            grandFatherNode.getRightNode().setColor(RedBlackTree.BLACK);
+            if (grandFatherNode.getParentNode() != null) {
                 grandFatherNode.setColor(RedBlackTree.RED);
-                redBlackTreeNode1 = grandFatherNode.getParentNode().getParentNode();
+                if (grandFatherNode.getParentNode().getParentNode() != null) {
+                    this.fixTree(grandFatherNode);
+                }
             }
             return;
         }
-        // 如果插入节点是左节点的话进行右旋如果插入节点为右节点进行左旋
-        redBlackTreeNode.getParentNode().setColor(RedBlackTree.BLACK);
+        // 判断父节点是否为爷爷节点的左节点
         RedBlackTreeNode<T> sonNode;
-        grandFatherNode.setColor(RedBlackTree.RED);
-        if (redBlackTreeNode.getParentNode().getLeftNode() == redBlackTreeNode) {
-            sonNode = redBlackTreeNode.getParentNode().getRightNode();
-            redBlackTreeNode.getParentNode().setRightNode(grandFatherNode);
+        RedBlackTreeNode<T> redBlackTreeNode1 = redBlackTreeNode;
+        if (grandFatherNode.getLeftNode() == redBlackTreeNode1.getParentNode()) {
+            // 如果插入节点是左节点的话进行右旋
+            while (true) {
+                if (redBlackTreeNode1.getParentNode().getLeftNode() == redBlackTreeNode1) {
+                    redBlackTreeNode1.getParentNode().setColor(RedBlackTree.BLACK);
+                    grandFatherNode.setColor(RedBlackTree.RED);
+                    sonNode = redBlackTreeNode1.getParentNode().getRightNode();
+                    redBlackTreeNode1.getParentNode().setRightNode(grandFatherNode);
+                    break;
+                }
+                grandFatherNode.setLeftNode(redBlackTreeNode1);
+                redBlackTreeNode1.getParentNode().setRightNode(redBlackTreeNode1.getLeftNode());
+                redBlackTreeNode1.setLeftNode(redBlackTreeNode1.getParentNode());
+                redBlackTreeNode1.getParentNode().setParentNode(redBlackTreeNode1);
+                redBlackTreeNode1.setParentNode(grandFatherNode);
+                redBlackTreeNode1 = redBlackTreeNode1.getLeftNode();
+            }
         } else {
-            sonNode = redBlackTreeNode.getParentNode().getLeftNode();
-            redBlackTreeNode.getParentNode().setLeftNode(grandFatherNode);
-        }
-        if (grandFatherNode.getParentNode() == null){
-            this.redBlackTreeNode = redBlackTreeNode.getParentNode();
-        } else {
-            if (grandFatherNode.getParentNode().getLeftNode() == grandFatherNode) {
-                grandFatherNode.getParentNode().setLeftNode(redBlackTreeNode.getParentNode());
-            } else {
-                grandFatherNode.getParentNode().setRightNode(redBlackTreeNode.getParentNode());
+            // 如果插入节点为右节点进行左旋
+            while (true) {
+                if (redBlackTreeNode1.getParentNode().getRightNode() == redBlackTreeNode1) {
+                    redBlackTreeNode1.getParentNode().setColor(RedBlackTree.BLACK);
+                    grandFatherNode.setColor(RedBlackTree.RED);
+                    sonNode = redBlackTreeNode1.getParentNode().getLeftNode();
+                    redBlackTreeNode1.getParentNode().setLeftNode(grandFatherNode);
+                    break;
+                } else {
+                    grandFatherNode.setRightNode(redBlackTreeNode1);
+                    redBlackTreeNode1.getParentNode().setLeftNode(redBlackTreeNode1.getRightNode());
+                    redBlackTreeNode1.setRightNode(redBlackTreeNode1.getParentNode());
+                    redBlackTreeNode1.getParentNode().setParentNode(redBlackTreeNode1);
+                    redBlackTreeNode1.setParentNode(grandFatherNode);
+                    redBlackTreeNode1 = redBlackTreeNode1.getRightNode();
+                }
             }
         }
-        redBlackTreeNode.getParentNode().setParentNode(grandFatherNode.getParentNode());
-        grandFatherNode.setParentNode(redBlackTreeNode.getParentNode());
-        if (grandFatherNode.getLeftNode() == redBlackTreeNode.getParentNode()) {
+        if (grandFatherNode.getParentNode() == null) {
+            this.redBlackTreeNode = redBlackTreeNode1.getParentNode();
+        } else {
+            if (grandFatherNode.getParentNode().getLeftNode() == grandFatherNode) {
+                grandFatherNode.getParentNode().setLeftNode(redBlackTreeNode1.getParentNode());
+            } else {
+                grandFatherNode.getParentNode().setRightNode(redBlackTreeNode1.getParentNode());
+            }
+        }
+        redBlackTreeNode1.getParentNode().setParentNode(grandFatherNode.getParentNode());
+        grandFatherNode.setParentNode(redBlackTreeNode1.getParentNode());
+        if (grandFatherNode.getLeftNode() == redBlackTreeNode1.getParentNode()) {
             grandFatherNode.setLeftNode(sonNode);
         } else {
             grandFatherNode.setRightNode(sonNode);
         }
         if (sonNode != null) {
             sonNode.setParentNode(grandFatherNode);
-            this.fixTree(sonNode);
         }
     }
 
@@ -253,9 +268,12 @@ public class RedBlackTree<T> {
             return;
         }
     }
-    
+
     public static void main(String[] args) {
-        final RedBlackTree<Integer> redBlackTree = new RedBlackTree<Integer>(new Integer[] {5, 1, 6, 2, 7, 5, 3, 10, 11, 12, 13, 8, 9});
+        final RedBlackTree<Integer> redBlackTree =
+            new RedBlackTree<Integer>(new Integer[] {5, 1, 6, 2, 7, 5, 3, 10, 11, 12, 13, 8, 9, 14, 15, 16, 17, 18});
+        final RedBlackTree<Integer> redBlackTree1 =
+            new RedBlackTree<Integer>(new Integer[] {5, 6, 7});
         System.out.println(redBlackTree.toString());
     }
 
