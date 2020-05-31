@@ -55,6 +55,7 @@ public class BinaryTree<T> {
             } else {
                 treeNode = new BinaryTreeNode<>(new LinkedList<T>(), BinaryTree.NULL_CODE, null, null, null);
             }
+            treeNode.getVals().add(val);
             this.treeNode = treeNode;
             this.length++;
             return;

@@ -14,7 +14,7 @@ class RedBlackTreeNode<T> {
      * 节点的颜色
      */
     private boolean color;
-    
+
     /**
      * 节点的值
      */
@@ -80,7 +80,7 @@ class RedBlackTreeNode<T> {
         this.parentNode = parentNode;
     }
 
-    public boolean isColor() {
+    public boolean getColor() {
         return color;
     }
 
@@ -101,8 +101,9 @@ class RedBlackTreeNode<T> {
 
     @Override
     public String toString() {
-        return "RedBlackTreeNode [color=" + color + ", vals=" + vals + ", code=" + code + ", leftNode=" + leftNode
-            + ", rightNode=" + rightNode + ", parentNode=" + parentNode + "]";
+        return "{color=" + color + ", vals=" + vals.toString()
+            + (leftNode == null ? "" : (", leftNode=" + leftNode.toString()))
+            + (rightNode == null ? "" : (", rightNode=" + rightNode.toString())) + "}";
     }
 
 }
