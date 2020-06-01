@@ -136,23 +136,21 @@ public class BinaryTree<T> {
         if (val == null) {
             code = BinaryTree.NULL_CODE;
         } else {
-            code = val.hashCode() & this.size;
+            code = val.hashCode() & (this.size - 1);
         }
         if (this.treeNode.getCode() == code) {
-            if (val != null) {
-                for (final Object object : this.treeNode.getVals()) {
-                    if (object.equals(val)) {
-                        return true;
-                    }
+            for (final Object object : this.treeNode.getVals()) {
+                if (object == val || (object != null && object.equals(val))) {
+                    return true;
                 }
-                return false;
             }
+            return false;
         } else {
             BinaryTreeNode<T> treeNode = this.treeNode;
             while (treeNode != null) {
                 if (treeNode.getCode() == code) {
                     for (final Object object : treeNode.getVals()) {
-                        if (object.equals(val)) {
+                        if (object == val || (object != null && object.equals(val))) {
                             return true;
                         }
                     }
@@ -166,6 +164,110 @@ public class BinaryTree<T> {
             }
         }
         return false;
+    }
+
+    /**
+     * 删除树中的val
+     * 
+     * @param val
+     *            要删除的值
+     */
+    public void remove(final T val) {
+        int code;
+        if (val == null) {
+            code = BinaryTree.NULL_CODE;
+        } else {
+            code = val.hashCode() & (this.size - 1);
+        }
+        if (this.treeNode.getCode() == code) {
+            for (final Object object : this.treeNode.getVals()) {
+                if (object == val || (object != null && object.equals(val))) {
+                    this.length--;
+                    if (this.treeNode.getVals().size() > 2) {
+                        this.treeNode.getVals().remove(val);
+                        return;
+                    } else {
+                        this.remove(this.treeNode);
+                    }
+                }
+            }
+            return;
+        } else {
+            BinaryTreeNode<T> treeNode = this.treeNode;
+            while (treeNode != null) {
+                if (treeNode.getCode() == code) {
+                    for (final Object object : treeNode.getVals()) {
+                        if (object == val || (object != null && object.equals(val))) {
+                            this.length--;
+                            if (treeNode.getVals().size() > 2) {
+                                treeNode.getVals().remove(val);
+                                return;
+                            } else {
+                                this.remove(treeNode);
+                            }
+                        }
+                    }
+                    return;
+                }
+                if (treeNode.getCode() > code) {
+                    treeNode = treeNode.getLeftNode();
+                } else {
+                    treeNode = treeNode.getRightNode();
+                }
+            }
+        }
+    }
+    
+    /**
+     * 移除指定节点
+     * 
+     * @param binaryTreeNode
+     *            要移除的节点
+     */
+    private void remove(final BinaryTreeNode<T> binaryTreeNode) {
+        if (binaryTreeNode.getRightNode() == null) {
+            if (binaryTreeNode.getParentNode() == null) {
+                this.treeNode = binaryTreeNode.getLeftNode();
+                if (binaryTreeNode.getLeftNode() != null) {
+                    binaryTreeNode.getLeftNode().setParentNode(null);
+                }
+            } else {
+                if (binaryTreeNode.getLeftNode() != null) {
+                    binaryTreeNode.getLeftNode().setParentNode(binaryTreeNode.getParentNode());
+                }
+                if (binaryTreeNode.getParentNode().getLeftNode() == binaryTreeNode) {
+                    binaryTreeNode.getParentNode().setLeftNode(binaryTreeNode.getLeftNode());
+                } else {
+                    binaryTreeNode.getParentNode().setRightNode(binaryTreeNode.getLeftNode());
+                }
+            }
+            return;
+        }
+        BinaryTreeNode<T> rightNode = binaryTreeNode.getRightNode();
+        while (true) {
+            if (rightNode.getLeftNode() != null) {
+                rightNode = rightNode.getLeftNode();
+            } else {
+                if (rightNode.getRightNode() != null) {
+                    rightNode = rightNode.getRightNode();
+                } else {
+                    break;
+                }
+            }
+        }
+        if (rightNode.getParentNode().getLeftNode() == rightNode) {
+            rightNode.getParentNode().setLeftNode(null);
+        } else {
+            rightNode.getParentNode().setRightNode(null);
+        }
+        rightNode.setLeftNode(binaryTreeNode.getLeftNode());
+        rightNode.setRightNode(binaryTreeNode.getRightNode());
+        if (binaryTreeNode.getParentNode() == null) {
+            this.treeNode = rightNode;
+            rightNode.setParentNode(null);
+        } else {
+            rightNode.setParentNode(binaryTreeNode.getParentNode());
+        }
     }
 
     public BinaryTree() {
@@ -195,7 +297,7 @@ public class BinaryTree<T> {
             return;
         }
     }
-    
+
     @Override
     public String toString() {
         return "BinaryTree [length=" + length + ", treeNode=[" + treeNode + "]]";
@@ -203,6 +305,7 @@ public class BinaryTree<T> {
 
     public static void main(String[] args) {
         final BinaryTree<Integer> tree = new BinaryTree<Integer>(new Integer[] {5, 1, 6, 2, 7, 5, 3});
+        tree.remove(3);
         System.out.println(tree.toString());
     }
 

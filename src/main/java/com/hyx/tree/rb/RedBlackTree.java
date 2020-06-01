@@ -3,8 +3,13 @@ package com.hyx.tree.rb;
 import java.util.LinkedList;
 
 /**
- * 红黑树 红黑树是每个节点都带有颜色属性的二叉查找树，颜色或红色或黑色,在二叉查找树强制一般要求以外，对于任何有效的红黑树我们增加了如下的额外要求: 1. 节点是红色或黑色 2. 根节点是黑色 3.
- * 所有叶子都是黑色(叶子是NUIL节点) 4. 每个红色节点的两个子节点都是黑色(从每个叶子到根的所有路径上不能有两个连续的红色节点) 5. 从任一节点到其每个叶子的所有路径都包含相同数目的黑色节点
+ * @description 红黑树 
+ * 红黑树是每个节点都带有颜色属性的二叉查找树，颜色或红色或黑色,在二叉查找树强制一般要求以外，对于任何有效的红黑树我们增加了如下的额外要求: 
+ * 1. 节点是红色或黑色 
+ * 2. 根节点是黑色 
+ * 3. 所有叶子都是黑色(叶子是NUIL节点) 
+ * 4. 每个红色节点的两个子节点都是黑色(从每个叶子到根的所有路径上不能有两个连续的红色节点) 
+ * 5. 从任一节点到其每个叶子的所有路径都包含相同数目的黑色节点
  * 
  * @author sq
  * @date 2020/05/30
@@ -148,6 +153,37 @@ public class RedBlackTree<T> {
      * @return 存在为true，不存在为false
      */
     public boolean isExist(T val) {
+        int code;
+        if (val == null) {
+            code = RedBlackTree.NULL_CODE;
+        } else {
+            code = val.hashCode() & (this.size - 1);
+        }
+        if (this.redBlackTreeNode.getCode() == code) {
+            for (final Object object : this.redBlackTreeNode.getVals()) {
+                if (object == val || (object != null && object.equals(val))) {
+                    return true;
+                }
+            }
+            return false;
+        } else {
+            RedBlackTreeNode<T> redBlackTreeNode = this.redBlackTreeNode;
+            while (redBlackTreeNode != null) {
+                if (redBlackTreeNode.getCode() == code) {
+                    for (final Object object : redBlackTreeNode.getVals()) {
+                        if (object == val || (object != null && object.equals(val))) {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+                if (redBlackTreeNode.getCode() > code) {
+                    redBlackTreeNode = redBlackTreeNode.getLeftNode();
+                } else {
+                    redBlackTreeNode = redBlackTreeNode.getRightNode();
+                }
+            }
+        }
         return false;
     }
 

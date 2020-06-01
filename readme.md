@@ -22,7 +22,7 @@
 	@ Description 用于将大量坐标点压缩，路径却变动微小(当大量坐标点打印到前端，前端渲染后虽然细腻，但如此多的dom元素会使前端卡死)  
 	@ author yuxin.hang  
 	@ date 2020/5/28 20:50:36  
-	@ package com.hyx.distil.douglas
+	@ package com.hyx.distil.douglas  
 	@ name DouglasDistil  
 - 大数据去重算法：  
 	@ Description 用于在大量数据中查找重复项(本算法是我基于hash算法和bit树自己构思的，暂时还没有完成，如有小伙伴有更好的算法欢迎提出)  
@@ -50,6 +50,15 @@
 		@ date 2020/5/28 22:05:49  
 		@ package com.hyx.find.dichotomy  
 		@ name DichotomyFind  
+	2. kmp算法：  
+		@ Description KMP算法是一种改进的字符串匹配算法
+		> [https://baike.baidu.com/item/kmp%E7%AE%97%E6%B3%95/10951804?fromtitle=KMP&fromid=10158450&fr=aladdin](https://baike.baidu.com/item/kmp%E7%AE%97%E6%B3%95/10951804?fromtitle=KMP&fromid=10158450&fr=aladdin "kmp算法介绍")  
+		> 由D.E.Knuth，J.H.Morris和V.R.Pratt提出的，因此人们称它为克努特—莫里斯—普拉特操作（简称KMP算法）。KMP算法的核心是利用匹配失败后的信息，尽量减少模式串与主串的匹配次数以达到快速匹配的目的。具体实现就是通过一个next()函数实现，函数本身包含了模式串的局部匹配信息。KMP算法的时间复杂度O(m+n)  
+		
+		@ author yuxin.hang  
+		@ date 2020/6/1 19:20:05   
+		@ package com.hyx.find.kmp  
+		@ name KmpFind  
 - 树：  
 	1. 二叉树：  
 		@ Description 将一个给定数组排为树形，要求树的左侧的子节点比当前节点小，树的右侧节点比当前节点大  
@@ -72,7 +81,7 @@
 		@ package com.hyx.tree.rb  
 		@ name RedBlackTree  
 #### Git Feature
-1. Repository address [http://github.com]("github")
-2. Http address [https://github.com/hangyuxin/algorithm.git]("本库http地址")
-3. ssh address [git@github.com:hangyuxin/algorithm.git]("本库ssh地址")
+1. Repository address [http://github.com](http://github.com "github")
+2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")
+3. ssh address [git@github.com:hangyuxin/algorithm.git](git@github.com:hangyuxin/algorithm.git "本库ssh地址")
 	
