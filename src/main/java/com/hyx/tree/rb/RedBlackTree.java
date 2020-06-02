@@ -129,20 +129,42 @@ public class RedBlackTree<T> {
         }
         this.length++;
     }
-
+    
     /**
-     * 插入一个节点到树之中
+     * 将一个值从红黑树中移除
      * 
-     * @param treeNode
-     *            要插入的节点
+     * @param val
+     *            要移除的值
      */
-    private void push(final RedBlackTreeNode<T> redBlackTreeNode) {
-        if (redBlackTreeNode == null) {
-            return;
+    public void remove(final T val) {
+        int code;
+        if (val == null) {
+            code = RedBlackTree.NULL_CODE;
+        } else {
+            code = val.hashCode() & (this.size - 1);
         }
-        redBlackTreeNode.getVals().forEach(t -> this.push(t));
-        this.push(redBlackTreeNode.getLeftNode());
-        this.push(redBlackTreeNode.getRightNode());
+        RedBlackTreeNode<T> redBlackTreeNode = this.redBlackTreeNode;
+        while (redBlackTreeNode != null) {
+            if (redBlackTreeNode.getCode() == code) {
+                for (final Object object : redBlackTreeNode.getVals()) {
+                    if (object == val || (object != null && object.equals(val))) {
+                        this.length--;
+                        if (redBlackTreeNode.getVals().size() > 2) {
+                            redBlackTreeNode.getVals().remove(val);
+                            return;
+                        } else {
+                            this.remove(redBlackTreeNode);
+                        }
+                    }
+                }
+                return;
+            }
+            if (redBlackTreeNode.getCode() > code) {
+                redBlackTreeNode = redBlackTreeNode.getLeftNode();
+            } else {
+                redBlackTreeNode = redBlackTreeNode.getRightNode();
+            }
+        }
     }
 
     /**
@@ -274,6 +296,87 @@ public class RedBlackTree<T> {
         }
         if (sonNode != null) {
             sonNode.setParentNode(grandFatherNode);
+        }
+    }
+
+    /**
+     * 插入一个节点到树之中
+     * 
+     * @param treeNode
+     *            要插入的节点
+     */
+    private void push(final RedBlackTreeNode<T> redBlackTreeNode) {
+        if (redBlackTreeNode == null) {
+            return;
+        }
+        redBlackTreeNode.getVals().forEach(t -> this.push(t));
+        this.push(redBlackTreeNode.getLeftNode());
+        this.push(redBlackTreeNode.getRightNode());
+    }
+    
+    /**
+     * 从红黑树中移除一个节点
+     * 
+     * @param redBlackTreeNode
+     *            要移除的节点
+     */
+    private void remove(final RedBlackTreeNode<T> redBlackTreeNode) {
+        RedBlackTreeNode<T> removeNode = redBlackTreeNode;
+        // 寻找替换节点，也就是真正要删除的节点
+        while (removeNode.getLeftNode() != null || removeNode.getRightNode() != null) {
+            if (removeNode.getLeftNode() != null) {
+                removeNode = removeNode.getLeftNode();
+            } else {
+                removeNode = removeNode.getRightNode();
+            }
+        }
+        if (removeNode.getParentNode() == null) {
+            this.redBlackTreeNode = null;
+            return;
+        }
+        // 如果替换节点的颜色是红色，删除不会影响树，则直接将替换节点拉倒删除节点位置，然后将替换节点颜色变为删除节点的颜色
+        if (removeNode.getColor()) {
+            // 如果替换节点就是自己，那么直接删除就好
+            if (redBlackTreeNode == removeNode) {
+                if (removeNode.getParentNode().getLeftNode() == removeNode) {
+                    removeNode.getParentNode().setLeftNode(null);
+                } else {
+                    removeNode.getParentNode().setRightNode(null);
+                }
+            } else {
+                if (removeNode.getParentNode().getLeftNode() == removeNode) {
+                    removeNode.getParentNode().setLeftNode(null);
+                } else {
+                    removeNode.getParentNode().setRightNode(null);
+                }
+                if (redBlackTreeNode.getParentNode() == null) {
+                    this.redBlackTreeNode = removeNode;
+                } else {
+                    if (redBlackTreeNode.getParentNode().getLeftNode() == redBlackTreeNode) {
+                        redBlackTreeNode.getParentNode().setLeftNode(removeNode);
+                    } else {
+                        redBlackTreeNode.getParentNode().setRightNode(removeNode);
+                    }
+                }
+            }
+            removeNode.setLeftNode(redBlackTreeNode.getLeftNode());
+            removeNode.setRightNode(redBlackTreeNode.getRightNode());
+            removeNode.setParentNode(redBlackTreeNode.getParentNode());
+            removeNode.setColor(redBlackTreeNode.getColor());
+            return;
+        }
+        RedBlackTreeNode<T> sibNode;
+        // 判断替换节点是否为其父节点的左节点
+        if (removeNode.getParentNode().getLeftNode() == removeNode) {
+            sibNode = removeNode.getParentNode().getRightNode();
+            // 如果兄弟节点是红色，那么将兄弟节点染黑，父节点变红，然后以兄弟节点为中心左旋
+            if (sibNode != null && sibNode.getColor()) {
+                // TODO
+            }
+            
+        } else {
+            sibNode = removeNode.getParentNode().getLeftNode();
+            
         }
     }
 

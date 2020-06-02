@@ -65,7 +65,7 @@
 		@ author yuxin.hang  
 		@ date 2020/5/30 20:43:02 
 		@ package com.hyx.tree.binary  
-		@ name BinaryTree
+		@ name BinaryTree  
 	2. 红黑树：  
 		@ Description 将一个给定数组排为树形，要求树的左侧的子节点比当前节点小，树的右侧节点比当前节点大,要求树为红黑树(见红黑树定义)
 		> 红黑树是每个节点都带有颜色属性的二叉查找树，颜色或红色或黑色,在二叉查找树强制一般要求以外，对于任何有效的红黑树我们增加了如下的额外要求:  
@@ -80,6 +80,15 @@
 		@ editDate 2020/5/31 20:04:45  
 		@ package com.hyx.tree.rb  
 		@ name RedBlackTree  
+- 排序：
+	1. 快速排序：  
+		@ Description 将一个给定数组按给定规则排为有序数组(见快速排序定义)
+		> 快速排序由C. A. R. Hoare在1960年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列  
+
+		@ author yuxin.hang  
+		@ date 2020/6/2 21:55:40 
+		@ package com.hyx.sort.fast  
+		@ name FastSort
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
 2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")
