@@ -80,6 +80,12 @@
 		@ editDate 2020/5/31 20:04:45  
 		@ package com.hyx.tree.rb  
 		@ name RedBlackTree  
+	3. 最大堆：  
+		@ Description 将一个给定数组排为树形，要求树的最高节点最大,树的子节点小于或等于父节点  
+		@ author yuxin.hang  
+		@ date 2020/6/3 23:06:38  
+		@ package com.hyx.tree.binary  
+		@ name MaxTopBinaryTree  
 - 排序：
 	1. 快速排序：  
 		@ Description 将一个给定数组按给定规则排为有序数组(见快速排序定义)
@@ -88,7 +94,15 @@
 		@ author yuxin.hang  
 		@ date 2020/6/2 21:55:40 
 		@ package com.hyx.sort.fast  
-		@ name FastSort
+		@ name FastSort  
+	2. 堆排序:  
+		@ Description 将一个给定数组按给定规则排为有序数组(见堆排序定义)
+		> 堆排序（英语：Heapsort）是指利用堆这种数据结构所设计的一种排序算法，堆是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点  
+
+		@ author yuxin.hang  
+		@ date 2020/6/3 23:08:44  
+		@ package com.hyx.sort.stack  
+		@ name StackSort  
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
 2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")

@@ -2,6 +2,8 @@ package com.hyx.sort.fast;
 
 import java.util.Arrays;
 
+import com.hyx.sort.SortFunction;
+
 /**
  * 快速排序 选中一个数作为基准数，然后扫描数组，判断小于基数的放在基数的右侧，大于基数的放在左侧，然后将这两组数看为两个数组看为两位数组重复上述动作
  * 
@@ -83,26 +85,5 @@ public class FastSort {
         });
         System.out.println(Arrays.toString(arrays));
     }
-
-}
-
-/**
- * 排序方法
- * 
- * @author sq
- * @date 2020/06/02
- */
-interface SortFunction<T> {
-
-    /**
-     * 传入两个参数，判断哪一个大
-     * 
-     * @param t1
-     *            第一个数
-     * @param t2
-     *            第二个数
-     * @return 如果t1大返回正数，t2大返回负数，相等返回0
-     */
-    int sort(T t1, T t2);
 
 }
