@@ -103,6 +103,15 @@
 		@ date 2020/6/3 23:08:44  
 		@ package com.hyx.sort.stack  
 		@ name StackSort  
+- 回溯：
+	1. N皇后:   
+		@ Description 求在一个N*N的棋盘上，摆放N个皇后旗子，同时使所有皇后彼此之间都无法相互攻击最多几种摆法(皇后见定义)
+		> 英文：Queen是国际象棋棋局中实力最强的一种棋子，可横直斜走，且格数不限，吃子与走法相同。 
+
+		@ author yuxin.hang  
+		@ date 2020/6/4 21:36:25  
+		@ package com.hyx.backtrack  
+		@ name NQueen  
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
 2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")
