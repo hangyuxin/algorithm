@@ -110,7 +110,7 @@
 
 		@ author yuxin.hang  
 		@ date 2020/6/4 21:36:25  
-		@ package com.hyx.backtrack  
+		@ package com.hyx.backtrack.queen  
 		@ name NQueen  
 - 贪心：
 	1. 最小付钱：  
