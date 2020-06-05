@@ -26,7 +26,8 @@ public class NQueen {
      * @return 最大的摆法
      */
     private void backTrack(int index, int size) {
-        if (index >= size) {
+        // 如果所有行都排了皇后说明成功执行一次了
+        if (index == size) {
             this.size ++;
         } else {
             for (int i = 0; i < size; i++) {
@@ -54,7 +55,7 @@ public class NQueen {
     }
     
     public static void main(String[] args) {
-        final NQueen nQueen = new NQueen(8);
+        final NQueen nQueen = new NQueen(9);
         System.out.println(nQueen.get());
     }
     

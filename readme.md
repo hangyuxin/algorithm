@@ -112,6 +112,13 @@
 		@ date 2020/6/4 21:36:25  
 		@ package com.hyx.backtrack  
 		@ name NQueen  
+- 贪心：
+	1. 最小付钱：  
+		@ Description 现在存在N种钱，每种钱价值Nm，数量Nn，求在付W块钱时，如何付才可以使掏出的钱最少
+		@ author yuxin.hang  
+		@ date 2020/6/5 20:40:42   
+		@ package com.hyx.greedy.money  
+		@ name MinNumPayment  
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
 2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")
