@@ -30,14 +30,14 @@ public class FrogUpstairs {
         if (numLayers == 0) {
             return 0;
         }
-        final long[] arrays = new long[numLayers];
-        for (int i = 0; i < 3 && i < numLayers; i++) {
+        final long[] arrays = new long[numLayers + 1];
+        for (int i = 1; i < 3 && i <= numLayers; i++) {
             arrays[i] = i;
         }
-        for (int i = 3; i < numLayers; i++) {
+        for (int i = 3; i <= numLayers; i++) {
             arrays[i] = arrays[i - 1] + arrays[i - 2];
         }
-        return arrays[numLayers - 1];
+        return arrays[numLayers];
     }
     
     public static void main(String[] args) {
@@ -46,9 +46,11 @@ public class FrogUpstairs {
         System.out.println(frogUpstairs.getFunctionSize(1));
         System.out.println(frogUpstairs.getFunctionSize(2));
         System.out.println(frogUpstairs.getFunctionSize(3));
+        System.out.println(frogUpstairs.getFunctionSize(5));
         System.out.println(frogUpstairs.getFunctionSize(18));
         System.out.println(frogUpstairs.getFunctionSize(19));
         System.out.println(frogUpstairs.getFunctionSize(20));
+        System.out.println(frogUpstairs.getFunctionSize(100));
     }
 
 }
