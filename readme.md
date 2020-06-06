@@ -42,7 +42,12 @@
 		@ date 2020/5/29 21:14:15  
 		@ package com.hyx.dp.downstairs  
 		@ name EggDownstair  
-	2. 
+	2. 青蛙上楼：  
+		@ Description 现有一只青蛙frog，frog每次可以跳上 1层台阶或者2层台阶，问当有 n层台阶时frog共有多少种方式跳上去  
+		@ author yuxin.hang  
+		@ date 2020/6/6 21:07:36  
+		@ package com.hyx.dp.downstairs  
+		@ name FrogUpstairs  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
