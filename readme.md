@@ -48,6 +48,12 @@
 		@ date 2020/6/6 21:07:36  
 		@ package com.hyx.dp.downstairs  
 		@ name FrogUpstairs  
+	3. 股票最大利润：  
+		@ Description 给定一个数组a[]，数组中的数据为一只股票的每日价钱，第i个元素代表股票第i天的价钱，请设计一个策略求出最大买n次所获得的利益  
+		@ author yuxin.hang  
+		@ date 2020/6/7 20:11:55   
+		@ package com.hyx.dp.stack  
+		@ name TransactionMaxProfit  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
