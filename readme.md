@@ -54,6 +54,12 @@
 		@ date 2020/6/7 20:11:55   
 		@ package com.hyx.dp.stack  
 		@ name TransactionMaxProfit  
+	4. 连续数组的最大值：  
+		@ Description 给定一个整型数组arrays，数组中一个或连续的多个整数组成一个子数组，求所有子数组的和的最大值  
+		@ author yuxin.hang  
+		@ date 2020/6/8 20:54:54  
+		@ package com.hyx.dp.sum  
+		@ name MaxSonArraysSum  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
