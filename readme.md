@@ -60,6 +60,12 @@
 		@ date 2020/6/8 20:54:54  
 		@ package com.hyx.dp.sum  
 		@ name MaxSonArraysSum  
+	5. 正则表达式 ：  
+		@ Description 给定一个正则表达式p(只能含有.(匹配1个任意字符)和*(匹配0~n个*号前面的字符))，在给定一个字符串s，判断s是否符合p的规律  
+		@ author yuxin.hang  
+		@ date 2020/6/9 22:45:08   
+		@ package com.hyx.dp.match  
+		@ name Pattern  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
