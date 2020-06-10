@@ -66,6 +66,12 @@
 		@ date 2020/6/9 22:45:08   
 		@ package com.hyx.dp.match  
 		@ name Pattern  
+	5. 接雨水 ：  
+		@ Description 给定一个整型数组arrays(大于 1)，将每个数n换算为高为n宽为1的柱子，求这些柱子中可以接多少水  
+		@ author yuxin.hang  
+		@ date 2020/6/10 20:58:51  
+		@ package com.hyx.dp.sum  
+		@ name CatchRain  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  

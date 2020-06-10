@@ -25,23 +25,27 @@ public class Pattern {
         if (p.isEmpty()) {
             return false;
         }
-        final boolean[][] dps = new boolean[s.length() + 1][p.length() + 1];
+        final boolean[][] dps = new boolean[s.length()][p.length()];
         final char[] scs = s.toCharArray();
         final char[] pcs = p.toCharArray();
-        dps[0][0] = pcs[0] ==  '.' || pcs[0] ==  scs[0];
-        for (int i = 0, iSize = scs.length; i <= iSize;  i++) {
-            for (int j = 1, jSize = pcs.length; j <= jSize;  j++) {
-                if (pcs[j - 1] == '*') {
-                    dps[i][j] =
-                        (j > 1 && dps[i][j - 2]) || (((i > 0 && scs[i - 1] == pcs[j - 2]) || j > 1 && pcs[j - 2] == '.')
-                            && (i > 0 && dps[i - 1][j]));
+        for (int i = 0, iSize = scs.length; i < iSize;  i++) {
+            for (int j = 0, jSize = pcs.length; j < jSize;  j++) {
+                if (pcs[j] == '*') {
+                    if (i == 0) {
+                        dps[i][j] = pcs[j - 1] == '.' || scs[i] == pcs[j - 1];
+                    } else {
+                        dps[i][j] = dps[i - 1][j - 1] && (dps[i][j - 1] || pcs[j - 1] == '.' || scs[i] == pcs[j - 1]);
+                    }
                 } else {
-                    dps[i][j] =
-                        (i > 0 && dps[i - 1][j - 1]) && ((i > 0 && scs[i - 1] == pcs[j - 1]) || pcs[j - 1] == '.'); 
+                    if (i == 0) {
+                        dps[i][j] = pcs[j] ==  '.' || pcs[j] ==  scs[i];
+                    } else {
+                        dps[i][j] = dps[i - 1][j] && (scs[i - 1] == pcs[j] || pcs[j] == '.');
+                    }
                 }
             }
         }
-        return dps[s.length()][p.length()];
+        return dps[s.length() - 1][p.length() - 1];
     }
     
     /**
@@ -80,8 +84,10 @@ public class Pattern {
     
     public static void main(String[] args) {
         final Pattern pattern = new Pattern();
-        System.out.println(pattern.match("1*", "1111111111"));
+        System.out.println(pattern.match("1*a", "1a"));
+        System.out.println(pattern.match("111*111", "1111111111"));
         System.out.println(pattern.match("1*", "1"));
+        System.out.println(pattern.match("1*", "11"));
         System.out.println(pattern.match(".*.", "11"));
     }
 
