@@ -148,6 +148,16 @@
 		@ date 2020/6/5 20:40:42   
 		@ package com.hyx.greedy.money  
 		@ name MinNumPayment  
+- 机器学习:
+	1. 朴素贝叶斯分类：  
+		@ Description 一种自动分类算法
+		> [https://baike.baidu.com/item/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/4925905?fr=aladdin](https://baike.baidu.com/item/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/4925905?fr=aladdin "朴素贝叶斯百度百科")  
+		> 贝叶斯方法是以贝叶斯原理为基础，使用概率统计的知识对样本数据集进行分类。由于其有着坚实的数学基础，贝叶斯分类算法的误判率是很低的。贝叶斯方法的特点是结合先验概率和后验概率，即避免了只使用先验概率的主观偏见，也避免了单独使用样本信息的过拟合现象。贝叶斯分类算法在数据集较大的情况下表现出较高的准确率，同时算法本身也比较简单。
+		
+		@ author yuxin.hang  
+		@ date 2020/6/11 20:46:31   
+		@ package com.hyx.ai.lassify  
+		@ name NaiveBayesianAlgorithmLassify  
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
 2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")

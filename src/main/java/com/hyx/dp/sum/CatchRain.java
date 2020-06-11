@@ -20,19 +20,18 @@ public class CatchRain {
         if (arrays == null || arrays.length < 3) {
             return 0;
         }
-        int n=arrays.length;
-        int[] left_height=new int[n];
-        int[] right_height= new int[n];
-        for(int i=1;i<n;i++){
-            left_height[i]=Math.max(left_height[i-1],arrays[i-1]);
+        int[] left_height = new int[arrays.length];
+        int[] right_height = new int[arrays.length];
+        for (int i = 1,size = arrays.length; i < size; i++) {
+            left_height[i] = Math.max(left_height[i - 1], arrays[i - 1]);
         }
-        for(int i=n-2;i>=0;i--){
-            right_height[i]=Math.max(right_height[i+1],arrays[i+1]);
+        for (int i = arrays.length - 2; i >= 0; i--) {
+            right_height[i] = Math.max(right_height[i + 1], arrays[i + 1]);
         }
-        int sum=0;
-        for(int i=1;i<n-1;i++){
-            if(arrays[i]<left_height[i]&&arrays[i]<right_height[i]){
-                sum+=Math.min(left_height[i],right_height[i])-arrays[i];
+        int sum = 0;
+        for (int i = 1,  size = arrays.length - 1; i < size; i++) {
+            if (arrays[i] < left_height[i] && arrays[i] < right_height[i]) {
+                sum += Math.min(left_height[i], right_height[i]) - arrays[i];
             }
         }
         return sum;
