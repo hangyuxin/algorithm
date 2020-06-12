@@ -158,6 +158,13 @@
 		@ date 2020/6/11 20:46:31   
 		@ package com.hyx.ai.lassify  
 		@ name NaiveBayesianAlgorithmLassify  
+- 计算
+	1. 信息熵：  
+		@ Description 计算信息熵的大小  
+		@ author yuxin.hang  
+		@ date 2020/6/12 22:14:19    
+		@ package com.hyx.info.entropy  
+		@ name Entropy  
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
 2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")
