@@ -88,6 +88,12 @@
 		@ date 2020/6/1 19:20:05   
 		@ package com.hyx.find.kmp  
 		@ name KmpFind  
+	3. 两数之和等于第三数：  
+		@ Description 给定 一组数组arrays和一个数n，求出数组中哪两个元素之和等于n  
+		@ author yuxin.hang  
+		@ date 2020/6/13 19:14:07   
+		@ package com.hyx.find.hash  
+		@ name SumTwoNumber  
 - 树：  
 	1. 二叉树：  
 		@ Description 将一个给定数组排为树形，要求树的左侧的子节点比当前节点小，树的右侧节点比当前节点大  
