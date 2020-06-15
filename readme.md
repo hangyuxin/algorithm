@@ -60,24 +60,30 @@
 		@ date 2020/6/8 20:54:54  
 		@ package com.hyx.dp.sum  
 		@ name MaxSonArraysSum  
-	5. 正则表达式 ：  
+	5. 正则表达式：  
 		@ Description 给定一个正则表达式p(只能含有.(匹配1个任意字符)和*(匹配0~n个*号前面的字符))，在给定一个字符串s，判断s是否符合p的规律  
 		@ author yuxin.hang  
 		@ date 2020/6/9 22:45:08   
 		@ package com.hyx.dp.match  
 		@ name Pattern  
-	6. 接雨水 ：  
+	6. 接雨水：  
 		@ Description 给定一个整型数组arrays(大于 1)，将每个数n换算为高为n宽为1的柱子，求这些柱子中可以接多少水  
 		@ author yuxin.hang  
 		@ date 2020/6/10 20:58:51  
 		@ package com.hyx.dp.sum  
 		@ name CatchRain  
-	7. 骑士救公主 ：  
+	7. 骑士救公主：  
 		@ Description 某一个公主被魔王困于地下城中，一个骑士要去拯救公主，给定一个矩阵，每个元素代表一个房间，公主在最后一排最后一列的房间中， 骑士从第一排第一列出发，每个房间中的数字代表骑士进入该房间会增加的血量，当骑士血量=0时骑士会死亡，求骑士救出公主最低所需初始血量  
 		@ author yuxin.hang  
 		@ date 2020/6/14 20:49:40  
 		@ package com.hyx.dp.table  
 		@ name KnightSavesThePrincess  
+	8. 最大有效括号：  
+		@ Description 给定一个字符串s，s中只包含'('和')'这两种字符，求s中最长的合法括号长度  
+		@ author yuxin.hang  
+		@ date 2020/6/15 13:48:39  
+		@ package com.hyx.dp.sum  
+		@ name MaxEffectiveBrackets  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
