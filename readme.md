@@ -84,6 +84,12 @@
 		@ date 2020/6/15 13:48:39  
 		@ package com.hyx.dp.sum  
 		@ name MaxEffectiveBrackets  
+	9. 正则表达式二：  
+		@ Description 给定一个正则表达式p(只能含有?(匹配1个任意字符)和*(匹配任意字符串))，在给定一个字符串s，判断s是否符合p的规律  
+		@ author yuxin.hang  
+		@ date 2020/6/16 17:50:20  
+		@ package com.hyx.dp.match  
+		@ name Pattern1  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
