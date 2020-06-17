@@ -45,21 +45,14 @@ public class Pattern1 {
         }
         for (int i = 1, iSize = pChars.length + 1; i < iSize; i++) {
             int j = 1, jSize = sChars.length + 1;
+            boolean flag = false;
             if (pChars[i - 1] == '*') {
                 while (!dp[i - 1][j - 1] && j < jSize) j++;
                 dp[i][j - 1] = dp[i - 1][j - 1];
-                while (j < jSize) dp[i][j++] = true;
-            } else {
-                if (pChars[i - 1] == '?') {
-                    for (; j < jSize; j++) {
-                        dp[i][j] = dp[i - 1][j - 1];
-                    }
-                } else {
-                    for (; j < jSize; j++) {
-                        dp[i][j] = dp[i - 1][j - 1] && 
-                            pChars[i - 1] == sChars[j - 1];
-                    }
-                }
+                flag = true;
+            }
+            for (; j < jSize; j++) {
+                dp[i][j] = flag || (dp[i - 1][j - 1] && (pChars[i - 1] == '?' || pChars[i - 1] == sChars[j - 1]));
             }
         }
         return dp[pattern.length()][string.length()];
@@ -67,11 +60,13 @@ public class Pattern1 {
     
     public static void main(String[] args) {
         Pattern1 pattern = new Pattern1();
+        System.out.println(pattern.get("2*a", "1a"));
         System.out.println(pattern.get("1*a", "1a"));
         System.out.println(pattern.get("111*111", "1111111111"));
         System.out.println(pattern.get("1*", "1"));
         System.out.println(pattern.get("1*", "11"));
-        System.out.println(pattern.get("？*？", "11"));
+        System.out.println(pattern.get("?*?", "11"));
+        System.out.println(pattern.get("?233", "2233"));
     }
 
 }

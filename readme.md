@@ -189,6 +189,13 @@
 		@ date 2020/6/12 22:14:19    
 		@ package com.hyx.info.entropy  
 		@ name Entropy  
+- 有限状态机
+	1. 数字有效性：  
+		@ Description 给定一个字符串s，判断s是否为一个正确的十进制数字，可以包括(+,-,e,.,[0-9])  
+		@ author yuxin.hang  
+		@ date 2020/6/17 18:03:42    
+		@ package com.hyx.statemachine.finite  
+		@ name VerificationNumber  
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
 2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")
