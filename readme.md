@@ -90,6 +90,12 @@
 		@ date 2020/6/16 17:50:20  
 		@ package com.hyx.dp.match  
 		@ name Pattern1  
+	10. 扰乱字符串：  
+		@ Description 给定一个字符串s，可以依据任何节点将字符串划分为两个非空子字串，一直划分为每个子字符串都只有一个字符，然后可以任意n个节点旋转一次来得出一个字符串s1，在给定一个字符串s2，求s2是否为s1  
+		@ author yuxin.hang  
+		@ date 2020/6/18 19:10:10  
+		@ package com.hyx.dp.string  
+		@ name DisturbString  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
