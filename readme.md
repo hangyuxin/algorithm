@@ -96,6 +96,12 @@
 		@ date 2020/6/18 19:10:10  
 		@ package com.hyx.dp.string  
 		@ name DisturbString  
+	11. 编辑距离：  
+		@ Description 给定两个字符串s1，s2，你可以对s1和s2进行任何操作(每次操作只可以动一个字符，删除、插入和修改)，求将s1和s2变为相等字符串最少需要操作几次？
+		@ author yuxin.hang  
+		@ date 2020/6/19 17:14:53  
+		@ package com.hyx.dp.string  
+		@ name EditString  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
