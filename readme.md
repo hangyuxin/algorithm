@@ -102,6 +102,12 @@
 		@ date 2020/6/19 17:14:53  
 		@ package com.hyx.dp.string  
 		@ name EditString  
+	12. 交错字符串：  
+		@ Description 给定一个字符串s1一个字符串s2一个字符串s3，求s2是否有s1+s2交错而成的  
+		@ author yuxin.hang  
+		@ date 2020/6/20 17:33:30  
+		@ package com.hyx.dp.string  
+		@ name StaggeredString  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
