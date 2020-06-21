@@ -1,4 +1,4 @@
-package com.hyx.dp.stack;
+package com.hyx.dp.stock;
 
 /**
  * 问：

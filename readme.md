@@ -52,7 +52,7 @@
 		@ Description 给定一个数组a[]，数组中的数据为一只股票的每日价钱，第i个元素代表股票第i天的价钱，请设计一个策略求出最大买n次所获得的利益  
 		@ author yuxin.hang  
 		@ date 2020/6/7 20:11:55   
-		@ package com.hyx.dp.stack  
+		@ package com.hyx.dp.stock  
 		@ name TransactionMaxProfit  
 	4. 连续数组的最大值：  
 		@ Description 给定一个整型数组arrays，数组中一个或连续的多个整数组成一个子数组，求所有子数组的和的最大值  
@@ -213,6 +213,13 @@
 		@ author yuxin.hang  
 		@ date 2020/6/17 18:03:42    
 		@ package com.hyx.statemachine.finite  
+		@ name VerificationNumber  
+- 栈  
+	1. 最大矩形：  
+		@ Description 给定一个数组a，a中全部为非负整数，求a中存在的最大矩形面积为多少？  
+		@ author yuxin.hang  
+		@ date 2020/6/21 17:25:48    
+		@ package com.hyx.stack.monotonous  
 		@ name VerificationNumber  
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
