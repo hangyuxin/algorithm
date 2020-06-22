@@ -81,7 +81,7 @@
 	8. 最大有效括号：  
 		@ Description 给定一个字符串s，s中只包含'('和')'这两种字符，求s中最长的合法括号长度  
 		@ author yuxin.hang  
-		@ date 2020/6/15 13:48:39  
+		@ date 2020/6/15 12:48:39  
 		@ package com.hyx.dp.sum  
 		@ name MaxEffectiveBrackets  
 	9. 正则表达式二：  
@@ -99,7 +99,7 @@
 	11. 编辑距离：  
 		@ Description 给定两个字符串s1，s2，你可以对s1和s2进行任何操作(每次操作只可以动一个字符，删除、插入和修改)，求将s1和s2变为相等字符串最少需要操作几次？
 		@ author yuxin.hang  
-		@ date 2020/6/19 17:14:53  
+		@ date 2020/6/19 17:44:53  
 		@ package com.hyx.dp.string  
 		@ name EditString  
 	12. 交错字符串：  
@@ -107,7 +107,12 @@
 		@ author yuxin.hang  
 		@ date 2020/6/20 17:33:30  
 		@ package com.hyx.dp.string  
-		@ name StaggeredString  
+	12. 不同子序列：  
+		@ Description 给定一个字符串s1，一个字符串s2。你可以对s1进行删除字符操作，求将s1变换为s2最多有几种方式  
+		@ author yuxin.hang  
+		@ date 2020/6/22 17:57:58  
+		@ package com.hyx.dp.string  
+		@ name SubSequenceString  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
@@ -220,7 +225,7 @@
 		@ author yuxin.hang  
 		@ date 2020/6/21 17:25:48    
 		@ package com.hyx.stack.monotonous  
-		@ name VerificationNumber  
+		@ name MaxRectangle  
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
 2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")
