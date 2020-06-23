@@ -107,12 +107,18 @@
 		@ author yuxin.hang  
 		@ date 2020/6/20 17:33:30  
 		@ package com.hyx.dp.string  
-	12. 不同子序列：  
+	13. 不同子序列：  
 		@ Description 给定一个字符串s1，一个字符串s2。你可以对s1进行删除字符操作，求将s1变换为s2最多有几种方式  
 		@ author yuxin.hang  
 		@ date 2020/6/22 17:57:58  
 		@ package com.hyx.dp.string  
 		@ name SubSequenceString  
+	14. 最长回文串：  
+		@ Description 给定一个字符串s1，求s1中的最大回文子串  
+		@ author yuxin.hang  
+		@ date 2020/6/23 17:24:10  
+		@ package com.hyx.dp.string  
+		@ name MaxPalindromeString  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
