@@ -43,6 +43,26 @@ public class MaxPalindromeString {
         return string.substring(num, maxNum + num + 1);
     }
     
+    /**
+     * 获取回文串dp数组
+     * 
+     * @param string
+     *            要获取的回文串
+     * @return dp数组
+     */
+    public boolean[][] getPalindrome(final String string) {
+        final boolean[][] dps = new boolean[string.length()][string.length()];
+        final char[] chars = string.toCharArray();
+        for (int i = 0, size = chars.length; i < size; i++) {
+            for (int j = 0; j <= i; j++) {
+                if (chars[i] == chars[j] && (i - j  < 3 || dps[j + 1][i - 1])) {
+                    dps[j][i] = true;
+                }
+            }
+        }
+        return dps;
+    }
+    
     public static void main(String[] args) {
         final MaxPalindromeString maxPalindromeString = new MaxPalindromeString();
         System.out.println(maxPalindromeString.get("babad"));

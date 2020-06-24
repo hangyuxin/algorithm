@@ -119,6 +119,12 @@
 		@ date 2020/6/23 17:24:10  
 		@ package com.hyx.dp.string  
 		@ name MaxPalindromeString  
+	15. 最小切割回文串：  
+		@ Description 给定一个字符串s，通过n次切割，使s的每个子串都是回文串，求n最小为多少  
+		@ author yuxin.hang  
+		@ date 2020/6/24 17:32:26  
+		@ package com.hyx.dp.string  
+		@ name MinCutPalindromeString  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
