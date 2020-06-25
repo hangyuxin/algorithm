@@ -238,6 +238,21 @@
 		@ date 2020/6/21 17:25:48    
 		@ package com.hyx.stack.monotonous  
 		@ name MaxRectangle  
+- 图
+	1. 广度优先算法(BFS)：  
+		1.  单词接龙：  
+			@ Description 问：给定一个字符串s1，一个字符串s2，一个字符串列表ss，s1每次可以从ss总选取一个字符串来转换，每次转换最多转换一个字符，求s1转换为s2的最短顺序  
+			@ author yuxin.hang  
+			@ date 2020/6/25 18:39:09  
+			@ package com.hyx.graph.breadth  
+			@ name WordSolitaire  
+	2. 深度优先算法(DFS)： 
+		1.  xxx：  
+			@ Description XXX  
+			@ author XXX  
+			@ date XXX  
+			@ package XXX  
+			@ name XXX  
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
 2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")
