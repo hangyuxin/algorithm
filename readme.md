@@ -125,6 +125,12 @@
 		@ date 2020/6/24 17:32:26  
 		@ package com.hyx.dp.string  
 		@ name MinCutPalindromeString  
+	16. 字符编码：  
+		@ Description 给定一个只包含数字的字符串， 字符串内的字符按以下编码来编码吗，1-a、2-b …… 26-z，求最多可以转换出多少种字符串  
+		@ author yuxin.hang  
+		@ date 2020/6/26 19:17:29  
+		@ package com.hyx.dp.string  
+		@ name CharacterEncodingSring  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
