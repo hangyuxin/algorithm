@@ -89,7 +89,7 @@ public class CharacterEncodingSring {
         System.out.println(characterEncodingSring.get("276"));
         System.out.println(characterEncodingSring.get("101"));
         System.out.println(characterEncodingSring.get("110"));
-        System.out.println(characterEncodingSring.get("227"));// 2-2-7   22-7
+        System.out.println(characterEncodingSring.get("227"));
     }
 
 }

@@ -9,7 +9,7 @@ import java.util.Queue;
  * @author sq
  * @date 2020/05/30
  */
-class BinaryTreeNode<T> {
+public class BinaryTreeNode<T> {
 
     /**
      * 节点的值
@@ -87,8 +87,8 @@ class BinaryTreeNode<T> {
 
     @Override
     public String toString() {
-        return vals.toString() + (leftNode == null ? "" : (", leftNode=" + leftNode.toString()))
-            + (rightNode == null ? "" : (", rightNode=" + rightNode.toString()));
+        return "{vals=" + vals.toString() + (leftNode == null ? "" : (", leftNode=" + leftNode.toString()))
+            + (rightNode == null ? "" : (", rightNode=" + rightNode.toString())) + "}";
     }
 
 }
