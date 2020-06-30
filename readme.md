@@ -149,6 +149,12 @@
 		@ date 2020/6/29 20:18:28  
 		@ package com.hyx.dp.string  
 		@ name MinSuperString  
+	20. 单次拆分：  
+		@ Description 给定一个字符串s，一个字符串数组ss，求s是否可以拆分为ss中的单词，ss中的单词可以重复使用，s中的字符不可以重复使用  
+		@ author yuxin.hang  
+		@ date 2020/6/30 19:34:54  
+		@ package com.hyx.dp.string  
+		@ name WordSplitString  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
