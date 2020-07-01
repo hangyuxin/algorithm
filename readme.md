@@ -155,6 +155,12 @@
 		@ date 2020/6/30 19:34:54  
 		@ package com.hyx.dp.string  
 		@ name WordSplitString  
+	21. 乘积最大子数组：  
+		@ Description 给定一个整数数组s，求s中子数组乘积最大为多少  
+		@ author yuxin.hang  
+		@ date 2020/7/1 22:29:52  
+		@ package com.hyx.dp.sum  
+		@ name MaxSonArrayMultiplication  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
