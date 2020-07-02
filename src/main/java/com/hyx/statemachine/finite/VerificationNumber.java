@@ -84,6 +84,7 @@ public class VerificationNumber {
         System.out.println(verificationNumber.get("-+3"));
         System.out.println(verificationNumber.get("--3"));
         System.out.println(verificationNumber.get("++3"));
+        System.out.println("(aaa)".substring(1, "(aaa)".length() - 1));
     }
 
 }
