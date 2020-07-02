@@ -161,6 +161,12 @@
 		@ date 2020/7/1 22:29:52  
 		@ package com.hyx.dp.sum  
 		@ name MaxSonArrayMultiplication  
+	22. 最大偷窃数额：  
+		@ Description 给定一个数组n，数组中全部为大于0的数，取数时不可以连续取，必须接隔一位，求最大能取多大的数  
+		@ author yuxin.hang  
+		@ date 2020/7/2 22:24:24  
+		@ package com.hyx.dp.sum  
+		@ name TheftMoneyMax 
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
