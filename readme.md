@@ -166,7 +166,13 @@
 		@ author yuxin.hang  
 		@ date 2020/7/2 22:24:24  
 		@ package com.hyx.dp.sum  
-		@ name TheftMoneyMax 
+		@ name TheftMoneyMax  
+	23. 最大偷窃数额1：  
+		@ Description 给定一个数组n，数组中全部为大于0的数，取数时不可以连续取，必须接隔一位，求最大能取多大的数, 首尾只能可以偷窃一个  
+		@ author yuxin.hang  
+		@ date 2020/7/3 23:16:13  
+		@ package com.hyx.dp.sum  
+		@ name TheftMoneyMax1 
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
