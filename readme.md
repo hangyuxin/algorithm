@@ -172,7 +172,13 @@
 		@ author yuxin.hang  
 		@ date 2020/7/3 23:16:13  
 		@ package com.hyx.dp.sum  
-		@ name TheftMoneyMax1 
+		@ name TheftMoneyMax1  
+	24. 最大正方形：  
+		@ Description 给定一个二维数组n，数组汇总只有0,1两种数字，求有1组成的正方形最大面积为多大  
+		@ author yuxin.hang  
+		@ date 2020/7/4 15:48:42  
+		@ package com.hyx.dp.table  
+		@ name MaxSquare  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
