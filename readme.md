@@ -179,6 +179,12 @@
 		@ date 2020/7/4 15:48:42  
 		@ package com.hyx.dp.table  
 		@ name MaxSquare  
+	25. 丑数：  
+		@ Description 给定一个数字n，求第n个丑数为多少？(丑数为质因数只有2,3,5的数)  
+		@ author yuxin.hang  
+		@ date 2020/7/5 17:48:37  
+		@ package com.hyx.dp.find  
+		@ name UglyNumber  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
