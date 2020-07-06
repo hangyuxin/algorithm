@@ -313,6 +313,13 @@
 			@ date XXX  
 			@ package XXX  
 			@ name XXX  
+- 链表
+	1. 重复数字：  
+		@ Description 给定一个数组，改数组中存在一个数字是重复的，求这个重复的数字为多少  
+		@ author yuxin.hang  
+		@ date 2020/7/6 19:01:08    
+		@ package com.hyx.list.node  
+		@ name RepeatNumber  
 #### Git Feature
 1. Repository address [http://github.com](http://github.com "github")
 2. Http address [https://github.com/hangyuxin/algorithm.git](https://github.com/hangyuxin/algorithm.git "本库http地址")
