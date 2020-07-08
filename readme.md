@@ -185,6 +185,12 @@
 		@ date 2020/7/5 17:48:37  
 		@ package com.hyx.dp.find  
 		@ name UglyNumber  
+	26. 完全平方数：  
+		@ Description 给定一个数字n，n大于0，求n由最少需要几个完全平方数相加得到  
+		@ author yuxin.hang  
+		@ date 2020/7/7 18:00:40  
+		@ package com.hyx.dp.sum  
+		@ name CompleteSquareNum  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
