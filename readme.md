@@ -191,6 +191,12 @@
 		@ date 2020/7/7 18:00:40  
 		@ package com.hyx.dp.sum  
 		@ name CompleteSquareNum  
+	27. 最长上升子序列：  
+		@ Description 给定一个数组a， 求a中最长的上升子序列长度  
+		@ author yuxin.hang  
+		@ date 2020/7/8 19:15:28  
+		@ package com.hyx.dp.find  
+		@ name MaxRiseSubSequence  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
