@@ -197,6 +197,12 @@
 		@ date 2020/7/8 19:15:28  
 		@ package com.hyx.dp.find  
 		@ name MaxRiseSubSequence  
+	28. 矩形和：  
+		@ Description 给定一个二维数组a，求任意点p(x,y)到p1(x1,y1)中的数字和为多少，其中x<x1,y<y1  
+		@ author yuxin.hang  
+		@ date 2020/7/9 19:36:18  
+		@ package com.hyx.dp.table  
+		@ name RectangleSum  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
