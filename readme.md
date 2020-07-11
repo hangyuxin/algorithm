@@ -209,6 +209,12 @@
 		@ date 2020/7/10 20:51:56  
 		@ package com.hyx.dp.sum  
 		@ name PokeBalloon  
+	30. 最大拼接树：  
+		@ Description 给定两个数组a1，a2，数组中只存在0-9的数，求按n个数字排列组合而成的最大数为什么，排列时不可以打乱原数组的顺序  
+		@ author yuxin.hang  
+		@ date 2020/7/11 19:39:30  
+		@ package com.hyx.dp.find  
+		@ name MaxStitchingNumber  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
