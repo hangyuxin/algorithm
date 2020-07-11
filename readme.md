@@ -203,6 +203,12 @@
 		@ date 2020/7/9 19:36:18  
 		@ package com.hyx.dp.table  
 		@ name RectangleSum  
+	29. 戳气球：  
+		@ Description 给定一个气球数组a，每次可以选择打破一个气球i，打破后获得a[i]*a[i-1]*a[i+1]元钱，求最大可以获得多少钱？a[-1] = 1,a[a.length] = 1  
+		@ author yuxin.hang  
+		@ date 2020/7/10 20:51:56  
+		@ package com.hyx.dp.sum  
+		@ name PokeBalloon  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
