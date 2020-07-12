@@ -215,6 +215,12 @@
 		@ date 2020/7/11 19:39:30  
 		@ package com.hyx.dp.find  
 		@ name MaxStitchingNumber  
+	31. 最佳买卖股票时机含冷冻期：  
+		@ Description 给定一个数组a，第i个元素代表第i天股票的价格，求如何买卖可以获得最大利益，卖出后有一天的冷冻期，第二天不可以再次买入，必须尽可能多的去买卖  
+		@ author yuxin.hang  
+		@ date 2020/7/12 19:22:11  
+		@ package com.hyx.dp.stock  
+		@ name TransactionMaxProfit1  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
