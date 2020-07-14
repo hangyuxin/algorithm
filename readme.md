@@ -221,6 +221,12 @@
 		@ date 2020/7/12 19:22:11  
 		@ package com.hyx.dp.stock  
 		@ name TransactionMaxProfit1  
+	32. 最少掏硬币：  
+		@ Description 给定一个硬币金额数组a，一个物品金额n，求最少需要花多少个硬币才可以买下这个物品  
+		@ author yuxin.hang  
+		@ date 2020/7/13 19:43:40  
+		@ package com.hyx.dp.sum  
+		@ name MinCoinSum  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
