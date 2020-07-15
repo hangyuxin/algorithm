@@ -227,6 +227,18 @@
 		@ date 2020/7/13 19:43:40  
 		@ package com.hyx.dp.sum  
 		@ name MinCoinSum  
+	33. 比特位计数：  
+		@ Description 给定一个正整数n，求0-n之间每个整数的二进制中包含1的个数  
+		@ author yuxin.hang  
+		@ date 2020/7/14 20:10:50  
+		@ package com.hyx.dp.sum  
+		@ name BitOneSum  
+	34. 整数拆分：  
+		@ Description  给定一个正整数n，将n拆分为至少两个整数n1，n2,ni要求n=n1+n2+ni，求n1*n2*ni最大为多少  
+		@ author yuxin.hang  
+		@ date 2020/7/15 19:06:15  
+		@ package com.hyx.dp.find  
+		@ name IntegerSplit  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
