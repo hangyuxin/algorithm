@@ -243,8 +243,14 @@
 		@ Description  给定一组二维数组as，代表一些信封。第二维数组中第一个数字代表信封的宽度，第二个代表长度，如果一个信封的长宽都比另外一组小就可以放进去，求最大可以嵌套几个信封  
 		@ author yuxin.hang  
 		@ date 2020/7/15 19:06:15  
-		@ package 2020/7/16 19:29:41  
+		@ package com.hyx.dp.find   
 		@ name MaxMatryoshka  
+	36. 计算各个位数不同的数字个数：  
+		@ Description 给定一个非负整数 n，计算各位数字都不同的数字 x 的个数，其中 0 ≤ x < 10的n次方 。  
+		@ author yuxin.hang  
+		@ date 2020/7/17 20:39:56  
+		@ package com.hyx.dp.find  
+		@ name CountNumbersWithUniqueDigits  
 - 查找算法：  
 	1. 二分法：  
 		@ Description 在一个升序的队列中，如何较快的找到一个数字存不存在  
